@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>CRUD AngularJS API Rest</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/angular/angular.js"></script>
+	<script src="js/controller/pessoaForm.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style/bootstrap.min.css">
+</head>
+<body ng-app="myAppForm" ng-controller="PessoaFormCtrl">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#">Teste Cast</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Test 1</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Test 2</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link active" href="pessoas.html">Test 3</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div class="card">
+	  <div class="card-header">
+	   <h4 style="float:left;">Create Pessoa</h4>
+	   <a href="pessoas.html" class="btn btn-success" style="float:right;">BACK</a>
+	  </div>
+	  <div class="card-body">
+	  	<form>
+		  <div class="form-group">
+		    <label for="name">Name</label>
+		    <input type="text" class="form-control" ng-model="pessoa.name" placeholder="Enter name" required>
+		  </div>
+			<div class="row">
+			  	<div class="col-md-8">
+				    <label for="name">Street</label>
+				    <input type="text" class="form-control" ng-model="pessoa.street" placeholder="Enter street">
+			  	</div>
+			  	<div class="col-md-4">
+				    <label for="name">Number</label>
+				    <input type="text" class="form-control" ng-model="pessoa.number" placeholder="Enter number">
+			  	</div>		    
+			</div>
+		  	<div class="row">
+			  	<div class="col-md-4">
+				    <label for="name">Neighborhood</label>
+				    <input type="text" class="form-control" ng-model="pessoa.neighborhood" placeholder="Enter neighborhood">
+				</div>
+				<div class="col-md-4">
+				    <label for="name">City</label>
+				    <input type="text" class="form-control" ng-model="pessoa.city" placeholder="Enter city">	
+			    </div>	  
+			    <div class="col-md-4">
+				    <label for="name">State</label>
+				    <input type="text" class="form-control" ng-model="pessoa.state" placeholder="Enter state">
+			    </div>  		    
+	     	</div>
+		  	<div class="row">
+			  	<div class="col-md-6">
+				    <label for="name">Cellphone</label>
+				    <input type="text" class="form-control" ng-model="pessoa.cellphone" placeholder="Enter cellphone">
+			  	</div>
+				<div class="col-md-6">
+				    <label for="name">Phone</label>
+				    <input type="text" class="form-control" ng-model="pessoa.phone" placeholder="Enter phone">
+				</div>
+		  	</div>
+		  	<div style="padding-top:20px;">
+		  		<button type="submit" class="btn btn-primary" ng-click="save()" ng-disabled="disabled">Submit</button>
+		  	</div>		  		  		  	  		  		  		  
+		</form>
+	  </div>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>CRUD AngularJS API Rest</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/angular/angular.js"></script>
+	<script src="js/controller/pessoa.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style/bootstrap.min.css">
+</head>
+<body ng-app="myApp" ng-controller="PessoaCtrl">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#">Teste Cast</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Test 1</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Test 2</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link active" href="pessoas.html">Test 3</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+<div class="card">
+  <div class="card-header">
+   <h4 style="float:left;">Pessoas</h4>
+   <a href="addPessoa.html" class="btn btn-success" style="float:right;">ADD</a>
+  </div>
+  <div class="card-body">
+	<table class="table table-dark">
+	  <thead>
+	    <tr>
+	      <th scope="col">#</th>
+	      <th scope="col">Name</th>
+	      <th scope="col">Street</th>
+	      <th scope="col">Number</th>
+	      <th scope="col">Neighborhood</th>
+	      <th scope="col">City</th>
+	      <th scope="col">State</th>
+	      <th scope="col">Cellphone</th>
+	      <th scope="col">Phone</th>
+	      <th scope="col" width="12%">Actions</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat="pessoa in pessoas">
+	      <th scope="row">{{$index + 1}}</th>
+	      <td>{{pessoa.name}}</td>
+	      <td>{{pessoa.street}}</td>
+	      <td>{{pessoa.number}}</td>
+	      <td>{{pessoa.neighborhood}}</td>
+	      <td>{{pessoa.city}}</td>
+	      <td>{{pessoa.state}}</td>
+	      <td>{{pessoa.cellphone}}</td>
+	      <td>{{pessoa.phone}}</td>
+	      <td>
+	      	<a href="addPessoa.html?id={{pessoa.id}}" class="btn btn-primary">Edit</a>
+	      	<button class="btn btn-danger" confirmed-click="delete(pessoa.id)" ng-confirm-click="">Delete</button>
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
+  </div>
+</div>	
+
+
+
+</body>
+</html>
